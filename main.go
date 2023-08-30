@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 
@@ -39,4 +42,9 @@ func main() {
 	fmt.Println(words)
 	// rang
 	fmt.Println(words[1:3])
+
+	// string package
+	sentence := "Hello i am a boy"
+	fmt.Println(strings.Contains(sentence, "Hello"))
+	fmt.Println(strings.ToUpper(sentence))
 }
