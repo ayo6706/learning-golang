@@ -13,4 +13,9 @@ func main() {
 
 	age := 2
 	fmt.Println(name, age, phone, amount)
+	fmt.Print("hello \n")
+
+	fmt.Printf("hello %v, your age is %v \n", name, age)
+	fmt.Printf("hello %q, your age is %q \n", name, age)
+	fmt.Printf("hello %T, your age is %T \n", name, age)
 }
