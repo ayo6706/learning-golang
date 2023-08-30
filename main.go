@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"sort"
 	"strings"
 )
 
@@ -47,4 +48,15 @@ func main() {
 	sentence := "Hello i am a boy"
 	fmt.Println(strings.Contains(sentence, "Hello"))
 	fmt.Println(strings.ToUpper(sentence))
+
+	scores := []int{1, 34, 55, 354, 43, 3}
+	sort.Ints(scores)
+	fmt.Println(scores)
+	fmt.Println(sort.SearchInts(scores, 1))
+
+	people := []string{"shina", "tomiwa", "dami", "kator", "peace"}
+	sort.Strings(people)
+	fmt.Println(people)
+	fmt.Println(sort.SearchStrings(people, "peace"))
+
 }
