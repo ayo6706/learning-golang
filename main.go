@@ -49,6 +49,7 @@ func main() {
 	fmt.Println(strings.Contains(sentence, "Hello"))
 	fmt.Println(strings.ToUpper(sentence))
 
+	// sort
 	scores := []int{1, 34, 55, 354, 43, 3}
 	sort.Ints(scores)
 	fmt.Println(scores)
@@ -58,5 +59,27 @@ func main() {
 	sort.Strings(people)
 	fmt.Println(people)
 	fmt.Println(sort.SearchStrings(people, "peace"))
+
+	// loops
+	// while loop in go
+	x := 0
+	for x < 5 {
+		fmt.Println("value of x is", x)
+		x++
+	}
+
+	// similar to for loop in go
+	for i := 0; i < 5; i++ {
+		fmt.Println("value of x is", i)
+	}
+
+	// loop through a slices
+	for i := 0; i < len(people); i++ {
+		fmt.Println(people[i])
+	}
+
+	for index, value := range people {
+		fmt.Printf("the value at index %v is %v \n", index, value)
+	}
 
 }
