@@ -2,15 +2,31 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"sort"
 	"strings"
 )
 
-func main() {
+var name string
+var phone int
+var amount float64
+var age int
 
-	var name string
-	var phone int
-	var amount float64
+func sayGreeting(name string) {
+
+	fmt.Printf("hello %v", name)
+
+}
+func cycleGreeting(names []string, f func(string)) {
+	for _, value := range names {
+		f(value)
+	}
+}
+func circleArea(r float64) float64 {
+	return math.Pi * r * r
+}
+
+func variableExamples() {
 
 	phone = 81238484
 	amount = 33.2
@@ -18,12 +34,17 @@ func main() {
 	age := 2
 	fmt.Println(name, age, phone, amount)
 	fmt.Print("hello \n")
+}
 
+func formattedStringExample() {
 	// formatted string
 	fmt.Printf("hello %v, your age is %v \n", name, age)
 	fmt.Printf("hello %q, your age is %q \n", name, age)
 	fmt.Printf("hello %T, your age is %T \n", name, age)
 
+}
+
+func arrayExample() {
 	// array
 	var ages [3]int = [3]int{23, 4, 5}
 	var agesTwo = [3]int{1, 2, 3}
@@ -35,6 +56,9 @@ func main() {
 
 	fmt.Println(names, len(names))
 
+}
+
+func slicesExample() {
 	// slices
 	var words = []string{"he", "she", "yes"}
 	fmt.Println(words)
@@ -43,12 +67,16 @@ func main() {
 	fmt.Println(words)
 	// rang
 	fmt.Println(words[1:3])
+}
 
+func stringPackageExample() {
 	// string package
 	sentence := "Hello i am a boy"
 	fmt.Println(strings.Contains(sentence, "Hello"))
 	fmt.Println(strings.ToUpper(sentence))
+}
 
+func sortAndLoopsExamples() {
 	// sort
 	scores := []int{1, 34, 55, 354, 43, 3}
 	sort.Ints(scores)
@@ -81,5 +109,15 @@ func main() {
 	for index, value := range people {
 		fmt.Printf("the value at index %v is %v \n", index, value)
 	}
+}
+func main() {
+
+	sayGreeting("Ayomide")
+	cycleGreeting([]string{"Ayo", "David"}, sayGreeting)
+
+	a1 := circleArea(10.6)
+	a2 := circleArea(5.9)
+
+	fmt.Println(a1, a2)
 
 }
