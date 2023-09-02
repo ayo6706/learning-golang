@@ -110,14 +110,32 @@ func sortAndLoopsExamples() {
 		fmt.Printf("the value at index %v is %v \n", index, value)
 	}
 }
+
+func getInitails(name string) (string, string) {
+	s := strings.ToUpper(name)
+	names := strings.Split(s, " ")
+
+	var initials []string
+	for _, v := range names {
+		initials = append(initials, v[:1])
+	}
+	if len(initials) > 1 {
+		return initials[0], initials[1]
+	}
+	return initials[0], "_"
+
+}
 func main() {
 
-	sayGreeting("Ayomide")
-	cycleGreeting([]string{"Ayo", "David"}, sayGreeting)
+	// sayGreeting("Ayomide")
+	// cycleGreeting([]string{"Ayo", "David"}, sayGreeting)
 
-	a1 := circleArea(10.6)
-	a2 := circleArea(5.9)
+	// a1 := circleArea(10.6)
+	// a2 := circleArea(5.9)
 
-	fmt.Println(a1, a2)
+	// fmt.Println(a1, a2)
+
+	fn, sn := getInitails("Ayomide Onibokun")
+	fmt.Println(fn, sn)
 
 }
