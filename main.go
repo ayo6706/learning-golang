@@ -128,24 +128,7 @@ func getInitails(name string) (string, string) {
 
 var score = 20.3
 
-func main() {
-
-	// sayGreeting("Ayomide")
-	// cycleGreeting([]string{"Ayo", "David"}, sayGreeting)
-
-	// a1 := circleArea(10.6)
-	// a2 := circleArea(5.9)
-
-	// fmt.Println(a1, a2)
-
-	// fn, sn := getInitails("Ayomide Onibokun")
-	// fmt.Println(fn, sn)
-
-	// sayHello("Ayomide")
-	// for _, v := range points {
-	// 	fmt.Println(v)
-	// }
-	// showScore()
+func mapsExamples() {
 	menu := map[string]string{
 		"name":       "Ayomide",
 		"department": "Computer engineering"}
@@ -167,4 +150,39 @@ func main() {
 
 	phonebook[23232332] = "some"
 	fmt.Println(phonebook)
+}
+
+// pointers
+func updateName(x *string) {
+	*x = "Ayomide"
+}
+
+func pointerExample() {
+	name := "David"
+	m := &name
+	fmt.Println(name)
+	updateName(m)
+	fmt.Println("memory address value", *m)
+	fmt.Println(name)
+}
+func main() {
+
+	// sayGreeting("Ayomide")
+	// cycleGreeting([]string{"Ayo", "David"}, sayGreeting)
+
+	// a1 := circleArea(10.6)
+	// a2 := circleArea(5.9)
+
+	// fmt.Println(a1, a2)
+
+	// fn, sn := getInitails("Ayomide Onibokun")
+	// fmt.Println(fn, sn)
+
+	// sayHello("Ayomide")
+	// for _, v := range points {
+	// 	fmt.Println(v)
+	// }
+	// showScore()
+	// fmt.Println("Memory address", &name)
+
 }
