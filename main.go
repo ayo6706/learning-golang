@@ -141,9 +141,30 @@ func main() {
 	// fn, sn := getInitails("Ayomide Onibokun")
 	// fmt.Println(fn, sn)
 
-	sayHello("Ayomide")
-	for _, v := range points {
-		fmt.Println(v)
+	// sayHello("Ayomide")
+	// for _, v := range points {
+	// 	fmt.Println(v)
+	// }
+	// showScore()
+	menu := map[string]string{
+		"name":       "Ayomide",
+		"department": "Computer engineering"}
+	fmt.Println(menu)
+	fmt.Println(menu["name"])
+
+	// looping maps
+	for k, v := range menu {
+		fmt.Println(k, v)
 	}
-	showScore()
+
+	phonebook := map[int]string{
+		22333333: "ayom",
+		23232332: "david",
+		23445555: "joy",
+	}
+	fmt.Println(phonebook)
+	fmt.Println(phonebook[23232332])
+
+	phonebook[23232332] = "some"
+	fmt.Println(phonebook)
 }
