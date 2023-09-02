@@ -185,4 +185,7 @@ func main() {
 	// showScore()
 	// fmt.Println("Memory address", &name)
 
+	mybill := newBill("ayomide bill")
+	fmt.Println(mybill)
+
 }
