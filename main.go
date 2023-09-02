@@ -125,6 +125,9 @@ func getInitails(name string) (string, string) {
 	return initials[0], "_"
 
 }
+
+var score = 20.3
+
 func main() {
 
 	// sayGreeting("Ayomide")
@@ -135,7 +138,12 @@ func main() {
 
 	// fmt.Println(a1, a2)
 
-	fn, sn := getInitails("Ayomide Onibokun")
-	fmt.Println(fn, sn)
+	// fn, sn := getInitails("Ayomide Onibokun")
+	// fmt.Println(fn, sn)
 
+	sayHello("Ayomide")
+	for _, v := range points {
+		fmt.Println(v)
+	}
+	showScore()
 }
