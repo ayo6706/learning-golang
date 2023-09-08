@@ -188,4 +188,6 @@ func main() {
 	mybill := newBill("ayomide bill")
 	fmt.Println(mybill)
 
+	mybill.format()
+
 }
